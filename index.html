@@ -1,545 +1,687 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Minecraft Server Creator | Java + Bedrock Edition</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="HJ7nNRZLQtE29lkpVoeqVq4OROKGnLSYUAyxL1FS">
+    <title>Minecraft Hosting (Java)</title>
+    <meta name="title" content="Minecraft Hosting (Java)">
+    <meta name="description" content="Premium game servers, Minecraft hosting, VPS, and web hosting with NVMe, DDoS protection, and 24/7 support. Fast, reliable, and affordable.">
+    <meta name="keywords" content="game server hosting, minecraft hosting, vps hosting, web hosting, dedicated servers, ddos protection, 99.99% uptime, instant setup, apsara hosting">
+    <meta name="author" content="Apsara Hosting">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en">
+    <meta name="revisit-after" content="7 days">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://apsara.host/products/minecraft-hosting-java">
+    <meta property="og:title" content="Minecraft Hosting (Java)">
+    <meta property="og:description" content="High-performance game servers with instant setup, enterprise DDoS protection, and 24/7 support. Powered by AMD EPYC processors and NVMe Gen4 SSDs.">
+    <meta property="og:image" content="https://apsara.host/assets/og-image.png">
+    <meta property="og:site_name" content="Apsara Hosting">
+    <meta property="og:locale" content="en_US">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://apsara.host/products/minecraft-hosting-java">
+    <meta property="twitter:title" content="Minecraft Hosting (Java)">
+    <meta property="twitter:description" content="High-performance game servers with instant setup, enterprise DDoS protection, and 24/7 support. Powered by AMD EPYC processors and NVMe Gen4 SSDs.">
+    <meta property="twitter:image" content="https://apsara.host/assets/twitter-image.png">
+    <link rel="canonical" href="https://apsara.host/products/minecraft-hosting-java">
+    <meta name="theme-color" content="#6cf2b2">
+    <script type="application/ld+json">
+        {
+    "<?php $__contextArgs = [];\nif (context()->has($__contextArgs[0])) :\nif (isset($value)) { $__contextPrevious[] = $value; }\n$value = context()->get($__contextArgs[0]); ?>": "https://schema.org",
+    "@type": "Organization",
+    "name": "Apsara Hosting",
+    "url": "https://apsara.host",
+    "logo": "https://apsara.host/assets/logo.png",
+    "description": "High-performance game server hosting, Minecraft hosting, VPS hosting, and web hosting solutions",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "availableLanguage": "English"
+    },
+    "sameAs": []
+}
+    </script>
 
-        body {
-            background: linear-gradient(145deg, #0a0f1e 0%, #0c1222 100%);
-            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, 'Minecraft', monospace;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 1.5rem;
-        }
 
-        /* main card */
-        .creator-card {
-            max-width: 1400px;
-            width: 100%;
-            background: rgba(18, 25, 45, 0.85);
-            backdrop-filter: blur(3px);
-            border-radius: 2.5rem;
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(88, 166, 255, 0.25);
-            overflow: hidden;
-            transition: all 0.2s;
-        }
+    
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: hsl(var(--color-primary));}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}</style>
+    <link rel="preload" as="style" href="https://apsara.host/default/assets/app-CPyyq9X-.css" /><link rel="modulepreload" as="script" href="https://apsara.host/default/assets/app-DKCq4tKC.js" /><link rel="stylesheet" href="https://apsara.host/default/assets/app-CPyyq9X-.css" data-navigate-track="reload" /><script type="module" src="https://apsara.host/default/assets/app-DKCq4tKC.js" data-navigate-track="reload"></script>    <style>
+    :root {
+        /* Branding Colors - React Design (#6cf2b2 to #64b5ff gradient) */
+        --color-primary: 162 85% 68%;
+        --color-secondary: 207 100% 70%;
 
-        /* header */
-        .brand {
-            background: #0b1020cc;
-            padding: 1.8rem 2rem;
-            border-bottom: 1px solid #2a3a60;
-            text-align: center;
-        }
+        /* Neutral Colors - Dark borders */
+        --color-neutral: 0 0% 7%;
 
-        .brand h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #f0f3fa, #7aa9ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.5px;
-        }
+        /* Text Colors - Light on dark */
+        --color-base: 228 100% 95%;
+        --color-muted: 222 33% 68%;
+        --color-inverted: 222 20% 7%;
 
-        .brand p {
-            color: #9aaec9;
-            margin-top: 0.6rem;
-            font-size: 1rem;
-        }
+        /* State Colors */
+        --color-success: 142 71% 45%;
+        --color-error: 0 75% 60%;
+        --color-warning: 25 95% 53%;
+        --color-inactive: 0 0% 63%;
+        --color-info: 210 100% 60%;
 
-        .free-badge {
-            display: inline-block;
-            background: #1f8a4c;
-            color: white;
-            font-size: 0.75rem;
-            font-weight: bold;
-            padding: 0.2rem 0.9rem;
-            border-radius: 40px;
-            margin-left: 12px;
-            vertical-align: middle;
-            letter-spacing: 0.5px;
-            box-shadow: 0 0 6px #2ecc71;
-        }
+        /* Background Colors - Dark navy theme #0b0e13 */
+        --color-background: 222 20% 7%;
+        --color-background-secondary: 222 18% 9%;
+    }
 
-        /* two columns */
-        .server-panels {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.8rem;
-            padding: 2rem;
-        }
+    .dark {
+        /* Branding Colors - React Design (#6cf2b2 to #64b5ff gradient) */
+        --color-primary: 162 85% 68%;
+        --color-secondary: 207 100% 70%;
 
-        .panel {
-            flex: 1;
-            min-width: 300px;
-            background: #0f1629cc;
-            border-radius: 1.8rem;
-            backdrop-filter: blur(4px);
-            border: 1px solid #2a3a60;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+        /* Neutral Colors - Dark borders */
+        --color-neutral: 0 0% 7%;
 
-        .panel:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5);
-            border-color: #4c7acf;
-        }
+        /* Text Colors - Light on dark */
+        --color-base: 228 100% 95%;
+        --color-muted: 222 33% 68%;
+        --color-inverted: 222 20% 7%;
 
-        .panel-header {
-            padding: 1.4rem 1.6rem;
-            border-bottom: 1px solid #1e2a46;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
+        /* Background Colors - Dark navy theme #0b0e13 */
+        --color-background: 222 20% 7%;
+        --color-background-secondary: 222 18% 9%;
+    }
+</style>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        .panel-header h2 {
-            font-size: 1.7rem;
-            font-weight: 700;
-            color: #eef4ff;
-        }
-
-        .version-icon {
-            font-size: 1.8rem;
-        }
-
-        .panel-body {
-            padding: 1.6rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-        }
-
-        .input-group label {
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #b9d0ff;
-        }
-
-        .input-group input, .input-group select {
-            background: #010a1a;
-            border: 1px solid #2d3e62;
-            border-radius: 1rem;
-            padding: 0.75rem 1rem;
-            color: white;
-            font-size: 0.95rem;
-            outline: none;
-            transition: 0.2s;
-            font-family: monospace;
-        }
-
-        .input-group input:focus, .input-group select:focus {
-            border-color: #5d9eff;
-            box-shadow: 0 0 0 2px #1e4a9e;
-        }
-
-        .ram-slider {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .ram-slider input {
-            flex: 1;
-        }
-
-        .generate-btn {
-            background: linear-gradient(95deg, #2c3e66, #1f2a48);
-            border: none;
-            border-radius: 2rem;
-            padding: 0.85rem;
-            font-weight: bold;
-            font-size: 1rem;
-            color: #d6e6ff;
-            cursor: pointer;
-            transition: all 0.2s;
-            margin-top: 0.5rem;
-            border: 1px solid #3e5a85;
-            font-family: inherit;
-        }
-
-        .generate-btn:hover {
-            background: linear-gradient(95deg, #3e5a8a, #2c3e66);
-            color: white;
-            border-color: #7ca5ff;
-            box-shadow: 0 4px 12px rgba(0, 80, 255, 0.2);
-        }
-
-        .output-area {
-            background: #03060ecc;
-            border-radius: 1.2rem;
-            padding: 1rem;
-            margin-top: 0.6rem;
-            border: 1px solid #25365a;
-        }
-
-        .output-label {
-            font-size: 0.75rem;
-            color: #89a9ff;
-            margin-bottom: 0.5rem;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        pre {
-            background: #000000aa;
-            padding: 1rem;
-            border-radius: 1rem;
-            overflow-x: auto;
-            font-family: 'Fira Code', 'Courier New', monospace;
-            font-size: 0.8rem;
-            color: #cbddf5;
-            white-space: pre-wrap;
-            word-break: break-word;
-            max-height: 260px;
-            overflow-y: auto;
-        }
-
-        .copy-btn {
-            background: #1a2c44;
-            border: none;
-            border-radius: 1.2rem;
-            padding: 0.3rem 0.9rem;
-            font-size: 0.7rem;
-            color: #bbd1ff;
-            cursor: pointer;
-            transition: 0.1s;
-        }
-
-        .copy-btn:hover {
-            background: #2c4770;
-            color: white;
-        }
-
-        .info-note {
-            background: #0e1628;
-            border-radius: 1.2rem;
-            margin: 0 2rem 2rem 2rem;
-            padding: 1rem 1.5rem;
-            font-size: 0.85rem;
-            color: #98abcf;
-            border-left: 4px solid #5d9eff;
-        }
-
-        .info-note a {
-            color: #9bbdff;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.2rem;
-            font-size: 0.75rem;
-            color: #4c6188;
-            border-top: 1px solid #1e2b44;
-        }
-
-        @media (max-width: 780px) {
-            .server-panels {
-                padding: 1rem;
-            }
-            .brand h1 {
-                font-size: 1.6rem;
-            }
-        }
-    </style>
+        <link rel="icon" href="/storage/favicon.ico">
+    <link rel="apple-touch-icon" href="/storage/favicon.ico">
+    
+    
 </head>
-<body>
-<div class="creator-card">
-    <div class="brand">
-        <h1>
-            ⚡ Minecraft Server Studio 
-            <span class="free-badge">100% FREE</span>
-        </h1>
-        <p>Generate ready-to-use startup scripts · Java Edition & Bedrock Edition · No hidden costs</p>
-    </div>
 
-    <div class="server-panels">
-        <!-- JAVA EDITION PANEL -->
-        <div class="panel">
-            <div class="panel-header">
-                <span class="version-icon">☕</span>
-                <h2>Java Edition</h2>
-                <span style="font-size:0.7rem; background:#2c3e50; padding:2px 8px; border-radius:30px;">Vanilla / Spigot / Paper</span>
-            </div>
-            <div class="panel-body">
-                <div class="input-group">
-                    <label>📁 Server Name / Folder</label>
-                    <input type="text" id="javaName" placeholder="my_java_server" value="java_server">
-                </div>
-                <div class="input-group">
-                    <label>🧠 RAM Allocation (MB)</label>
-                    <div class="ram-slider">
-                        <input type="range" id="javaRamSlider" min="512" max="8192" step="128" value="2048">
-                        <span id="javaRamValue" style="background:#010a1a; padding:0.3rem 0.8rem; border-radius:2rem; font-family:monospace;">2048 MB</span>
-                    </div>
-                </div>
-                <div class="input-group">
-                    <label>🎮 Minecraft Version (optional tag)</label>
-                    <input type="text" id="javaVersion" placeholder="1.20.4 / latest" value="1.20.4">
-                </div>
-                <div class="input-group">
-                    <label>📦 Server Type</label>
-                    <select id="javaType">
-                        <option value="vanilla">Vanilla (official server.jar)</option>
-                        <option value="paper">Paper (optimized)</option>
-                        <option value="spigot">Spigot</option>
-                    </select>
-                </div>
-                <button class="generate-btn" id="genJavaBtn">🚀 Generate Java Startup Script</button>
-                <div class="output-area">
-                    <div class="output-label">
-                        <span>📜 Startup Command + Instructions</span>
-                        <button class="copy-btn" id="copyJavaBtn">📋 Copy</button>
-                    </div>
-                    <pre id="javaOutput">// Click "Generate" to create your Java server script</pre>
-                </div>
-            </div>
-        </div>
+<body class="w-full bg-[#0b0e13] text-[#e6ecff] min-h-screen flex flex-col antialiased font-sans" x-cloak x-data="{darkMode: true}">
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700;800&display=swap');
 
-        <!-- BEDROCK EDITION PANEL -->
-        <div class="panel">
-            <div class="panel-header">
-                <span class="version-icon">🪨</span>
-                <h2>Bedrock Edition</h2>
-                <span style="font-size:0.7rem; background:#2c3e50; padding:2px 8px; border-radius:30px;">Windows / Linux</span>
-            </div>
-            <div class="panel-body">
-                <div class="input-group">
-                    <label>📁 Server Name / Folder</label>
-                    <input type="text" id="bedrockName" placeholder="bedrock_server" value="bedrock_server">
-                </div>
-                <div class="input-group">
-                    <label>🌐 IPv4 Port (default: 19132)</label>
-                    <input type="number" id="bedrockPort" value="19132" min="1024" max="65535">
-                </div>
-                <div class="input-group">
-                    <label>👥 Max Players (1-40)</label>
-                    <input type="number" id="bedrockMaxPlayers" value="10" min="1" max="40">
-                </div>
-                <div class="input-group">
-                    <label>📦 Level Name / World</label>
-                    <input type="text" id="bedrockLevel" value="Bedrock level" placeholder="MyWorld">
-                </div>
-                <button class="generate-btn" id="genBedrockBtn">🌍 Generate Bedrock Startup Script</button>
-                <div class="output-area">
-                    <div class="output-label">
-                        <span>⚙️ Setup + Run Commands</span>
-                        <button class="copy-btn" id="copyBedrockBtn">📋 Copy</button>
-                    </div>
-                    <pre id="bedrockOutput">// Click "Generate" to get Bedrock server helper</pre>
-                </div>
-            </div>
-        </div>
-    </div>
+    [x-cloak] {
+        display: none !important;
+    }
 
-    <div class="info-note">
-        💡 <strong>How it works (FREE & LOCAL):</strong> This tool creates ready-to-use scripts & startup commands. For Java, you need to download the server JAR (server.jar or paperclip) separately. For Bedrock, download the official Bedrock dedicated server software from Minecraft website. All scripts are safe, open-source, and run on your own machine — no cloud fees.
-    </div>
-    <footer>
-        🧙‍♂️ Completely free generator | Java startup uses modern flags | Bedrock shows environment variables & run instructions | Edit & copy easily
-    </footer>
-</div>
+    body {
+        font-family: 'Poppins', 'Kantumruy Pro', system-ui, sans-serif;
+    }
 
-<script>
-    (function() {
-        // ----- JAVA edition generator -----
-        const javaNameInput = document.getElementById('javaName');
-        const javaRamSlider = document.getElementById('javaRamSlider');
-        const javaRamValueSpan = document.getElementById('javaRamValue');
-        const javaVersionInput = document.getElementById('javaVersion');
-        const javaTypeSelect = document.getElementById('javaType');
-        const genJavaBtn = document.getElementById('genJavaBtn');
-        const javaOutputPre = document.getElementById('javaOutput');
-        const copyJavaBtn = document.getElementById('copyJavaBtn');
+    /* Announcement Bar */
+    .announcement-bar {
+        background: linear-gradient(to right, #6cf2b2, #64b5ff);
+        color: #0b0e13;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+        position: relative;
+        overflow: hidden;
+    }
 
-        // Bedrock elements
-        const bedrockNameInput = document.getElementById('bedrockName');
-        const bedrockPortInput = document.getElementById('bedrockPort');
-        const bedrockMaxPlayers = document.getElementById('bedrockMaxPlayers');
-        const bedrockLevelInput = document.getElementById('bedrockLevel');
-        const genBedrockBtn = document.getElementById('genBedrockBtn');
-        const bedrockOutputPre = document.getElementById('bedrockOutput');
-        const copyBedrockBtn = document.getElementById('copyBedrockBtn');
+    .announcement-bar a {
+        color: #0b0e13;
+        text-decoration: underline;
+    }
 
-        // Helper: update RAM display
-        function updateRamDisplay() {
-            let ramMB = parseInt(javaRamSlider.value, 10);
-            javaRamValueSpan.innerText = ramMB + " MB";
+    .announcement-bar a:hover {
+        text-decoration: none;
+    }
+
+    .announcement-bar button {
+        padding: 0.25rem;
+        border-radius: 9999px;
+        transition: background-color 0.2s;
+    }
+
+    .announcement-bar button:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header */
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        transition: all 0.3s;
+        background: rgba(11, 14, 19, 0.7);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .header.scrolled {
+        background: rgba(11, 14, 19, 0.7);
+        backdrop-filter: blur(20px);
+    }
+
+    .container {
+        max-width: 1250px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+    }
+
+    /* Logo */
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .logo {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .logo-text {
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        color: #e6ecff;
+    }
+
+    .logo-subtext {
+        color: #6cf2b2;
+        font-size: 0.75rem;
+        margin-top: -0.25rem;
+        letter-spacing: 0.05em;
+    }
+
+    /* Navigation */
+    .nav {
+        display: none;
+        align-items: center;
+        gap: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .nav {
+            display: flex;
         }
-        javaRamSlider.addEventListener('input', updateRamDisplay);
-        updateRamDisplay();
+    }
 
-        // JAVA script generator (produces run commands + basic setup)
-        function generateJavaScript() {
-            let serverFolder = javaNameInput.value.trim();
-            if (!serverFolder) serverFolder = "java_server";
-            // sanitize simple folder name (remove bad chars)
-            serverFolder = serverFolder.replace(/[^a-zA-Z0-9_\-]/g, '_');
-            let ramMB = parseInt(javaRamSlider.value, 10);
-            let versionTag = javaVersionInput.value.trim();
-            if (!versionTag) versionTag = "latest";
-            let serverType = javaTypeSelect.value;
-            
-            let jarFilename = "";
-            let downloadHint = "";
-            let additionalNote = "";
-            
-            if (serverType === "vanilla") {
-                jarFilename = "server.jar";
-                downloadHint = `▶ Download server.jar for ${versionTag} from https://piston-data.mojang.com/v1/objects/ (official launcher) or use 'minecraft-server.${versionTag}.jar'`;
-                additionalNote = `📥 Vanilla: place the official server jar named "server.jar" inside the folder.`;
-            } else if (serverType === "paper") {
-                jarFilename = "paper.jar";
-                downloadHint = `▶ Paper ${versionTag}: download from https://papermc.io/downloads (paper-${versionTag}-xxx.jar) and rename to paper.jar`;
-                additionalNote = `⚡ Paper provides better performance. After download, place the jar as paper.jar.`;
-            } else { // spigot
-                jarFilename = "spigot.jar";
-                downloadHint = `▶ Spigot ${versionTag}: use BuildTools or download from getbukkit.org. Rename to spigot.jar`;
-                additionalNote = `🔧 Spigot needs building via BuildTools for latest versions.`;
-            }
+    .nav-link {
+        color: #a6b0c3;
+        font-weight: 600;
+        transition: color 0.2s;
+    }
 
-            // Build java command
-            let javaCmd = `java -Xmx${ramMB}M -Xms${Math.min(512, ramMB)}M -jar ${jarFilename} nogui`;
-            
-            let scriptWindows = `@echo off
-title Minecraft Java Server - ${serverFolder}
-cd /d "%USERPROFILE%\\Desktop\\${serverFolder}" 2>nul || (
-    echo Creating folder structure...
-    mkdir "${serverFolder}"
-    cd "${serverFolder}"
-)
-echo ✅ Inside server directory: %cd%
-echo 📦 Download required: ${downloadHint}
-echo 🧠 RAM: ${ramMB}MB | Type: ${serverType}
-echo 🚀 Starting Java server...
-${javaCmd}
-pause`;
-            
-            let scriptLinuxMac = `#!/bin/bash
-# Minecraft Java Server startup script
-SERVER_DIR="$HOME/${serverFolder}"
-mkdir -p "$SERVER_DIR"
-cd "$SERVER_DIR"
-echo "📁 Working directory: $(pwd)"
-echo "⚠️ Make sure ${jarFilename} is present in this folder!"
-echo "Download hint: ${downloadHint}"
-echo "Starting with ${ramMB}MB RAM..."
-${javaCmd}
-`;
-            
-            let finalOutput = `╔══════════════════════════════════════════════════╗
-║   🧙 JAVA EDITION SERVER GENERATOR (FREE)      ║
-╚══════════════════════════════════════════════════╝
+    .nav-link:hover {
+        color: #e6ecff;
+    }
 
-📁 Folder name: ${serverFolder}
-🎮 Version: ${versionTag}
-🧠 RAM: ${ramMB} MB
-📦 Server Type: ${serverType.toUpperCase()}
+    .dropdown-container {
+        position: relative;
+    }
 
-${additionalNote}
-${downloadHint}
+    .dropdown-button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #a6b0c3;
+        font-weight: 600;
+        padding: 0.5rem 0;
+        transition: color 0.2s;
+    }
 
-💻 WINDOWS (batch script):
-----------------------------------------------${scriptWindows}
-----------------------------------------------
+    .dropdown-button a {
+        color: #a6b0c3;
+        font-weight: 600;
+        transition: color 0.2s;
+    }
 
-🐧 LINUX / macOS (bash script):
-----------------------------------------------${scriptLinuxMac}
-----------------------------------------------
+    .dropdown-button:hover,
+    .dropdown-button a:hover {
+        color: #e6ecff;
+    }
 
-✨ HOW TO USE:
-1. Create a folder named "${serverFolder}" on your desktop/server.
-2. Download the correct server jar (${jarFilename}) into that folder.
-3. Copy the appropriate script (Windows .bat or Linux .sh) inside the folder.
-4. Run the script — server will start with your settings.
-5. Accept EULA by editing eula.txt (set eula=true) if needed.
+    .dropdown-button button {
+        color: #a6b0c3;
+        transition: color 0.2s;
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
 
-✅ FIRST START: If eula.txt not accepted, server will ask. Edit file and restart.
-🔒 Port forwarding required for online multiplayer (default 25565).`;
+    .dropdown-button button:hover {
+        color: #e6ecff;
+    }
 
-            return finalOutput;
+    .dropdown-button svg {
+        width: 1rem;
+        height: 1rem;
+        transition: transform 0.2s;
+    }
+
+    .dropdown-button.active svg {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 0.5rem;
+        background: rgba(15, 18, 24, 0.95);
+        backdrop-filter: blur(40px);
+        border-radius: 18px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 1rem 0;
+        z-index: 50;
+        width: 320px;
+    }
+
+    .dropdown-menu.wide {
+        width: 520px;
+    }
+
+    .dropdown-header {
+        padding: 0 1.5rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown-title {
+        color: #e6ecff;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .dropdown-description {
+        color: #a6b0c3;
+        font-size: 0.875rem;
+    }
+
+    .dropdown-item {
+        display: block;
+        padding: 0.75rem 1rem;
+        margin: 0 0.5rem;
+        border-radius: 12px;
+        transition: all 0.2s;
+    }
+
+    .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .dropdown-item-title {
+        color: #e6ecff;
+        font-weight: 600;
+    }
+
+    .dropdown-item:hover .dropdown-item-title {
+        color: #6cf2b2;
+    }
+
+    .dropdown-item-description {
+        color: #a6b0c3;
+        font-size: 0.75rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    @media (min-width: 768px) {
+        .action-buttons {
+            gap: 1rem;
         }
+    }
 
-        // Update java output
-        function updateJavaOutput() {
-            let script = generateJavaScript();
-            javaOutputPre.innerText = script;
+    .action-button {
+        padding: 0.5rem 0.75rem;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        transition: all 0.3s;
+    }
+
+    @media (min-width: 768px) {
+        .action-button {
+            padding: 0.625rem 1rem;
         }
+    }
 
-        genJavaBtn.addEventListener('click', () => {
-            updateJavaOutput();
-        });
+    .action-button.login {
+        color: #e6ecff;
+        background: #0f131b
+    }
 
-        // BEDROCK generator: produces environment setup + run command (works universally)
-        function generateBedrockInstructions() {
-            let serverFolder = bedrockNameInput.value.trim();
-            if (!serverFolder) serverFolder = "bedrock_server";
-            serverFolder = serverFolder.replace(/[^a-zA-Z0-9_\-]/g, '_');
-            let port = parseInt(bedrockPortInput.value, 10);
-            if (isNaN(port) || port < 1024) port = 19132;
-            if (port > 65535) port = 19132;
-            let maxPlayers = parseInt(bedrockMaxPlayers.value, 10);
-            if (isNaN(maxPlayers)) maxPlayers = 10;
-            maxPlayers = Math.min(40, Math.max(1, maxPlayers));
-            let levelName = bedrockLevelInput.value.trim();
-            if (!levelName) levelName = "BedrockLevel";
-            
-            // bedrock dedicated server instructions
-            let bedrockRunCmd = "";
-            let platformHint = "";
-            let configSnippet = "";
-            
-            // For bedrock we generate a detailed guide + server.properties equivalent commands
-            // Actually bedrock uses a YAML or properties file: server.properties (or bedrock_server.yml? but official bedrock uses permissions etc)
-            // The official BDS (Bedrock Dedicated Server) uses `server.properties` file. We'll generate config suggestions.
-            configSnippet = `# === server.properties settings (create/edit in your bedrock folder) ===
-server-name=Minecraft Bedrock Server
-gamemode=survival
-difficulty=easy
-allow-cheats=false
-max-players=${maxPlayers}
-port=${port}
-level-name=${levelName}
-online-mode=true
-view-distance=10
-tick-distance=4`;
+    .action-button.login:hover {
+        transform: translateY(-0.125rem);
+    }
 
-            let startCommandWindows = `bedrock_server.exe`;
-            let startCommandLinux = `./bedrock_server`;
-            
-            let fullInstructions = `╔═══════════════════════════════════════════════════╗
-║      🪨 BEDROCK EDITION SERVER SETUP            ║
-╚═══════════════════════════════════════════════════╝
+    .action-button.register {
+        background: linear-gradient(to bottom right, #6cf2b2, #64b5ff);
+        color: #0b0e13;
+        position: relative;
+        overflow: hidden;
+    }
 
-📁 Recommended folder: ${serverFolder}
-🌐 Port: ${port}
-👥 Max Players: ${maxPlayers}
-🗺️ World Name: ${levelName}
+    .action-button.register:hover {
+        transform: translateY(-0.125rem);
+    }
 
-📦 GET BEDROCK DEDICATED SERVER SOFTWARE (FREE):
-   - Official download: https://www.minecraft.net/en-us/download/server/bedrock
-   - Choose your OS (Windows / Ubuntu / Linux)
+    .action-button.register::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, #64b5ff, #6cf2b2);
+        opacity: 0;
+        transition: opacity 0.3s;
+        border-radius: 12px;
+    }
 
-⚙️ CONFIGURATION STEPS:
-1. Create folder "${serverFolder}" and unzip the bedrock_server archive there.
-	
+    .action-button.register:hover::after {
+        opacity: 1;
+    }
+
+    .action-button.register span {
+        position: relative;
+        z-index: 10;
+    }
+
+    /* User Dropdown */
+    .user-dropdown-container {
+        position: relative;
+    }
+
+    .user-dropdown-button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.7rem;
+        border-radius: 15px;
+        background: linear-gradient(to bottom right, #6cf2b2, #64b5ff);
+        color: #0b0e13;
+        font-weight: 600;
+        font-size: 0.875rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+        .user-dropdown-button {
+            padding: 0.625rem 1.25rem;
+        }
+    }
+
+    .user-dropdown-button:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .user-dropdown-button::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, #64b5ff, #6cf2b2);
+        opacity: 0;
+        transition: opacity 0.3s;
+        border-radius: 9999px;
+    }
+
+    .user-dropdown-button img {
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(11, 14, 19, 0.1);
+    }
+
+    .user-dropdown-button span {
+        position: relative;
+        z-index: 10;
+    }
+
+    .user-dropdown-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 0.5rem;
+        background: rgba(15, 18, 24, 0.95);
+        backdrop-filter: blur(40px);
+        border-radius: 18px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 0.75rem 0;
+        z-index: 50;
+        width: 256px;
+    }
+
+    .user-dropdown-header {
+        padding: 0 1rem 0.75rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .user-dropdown-name {
+        color: #e6ecff;
+        font-weight: 600;
+        font-size: 0.875rem;
+    }
+
+    .user-dropdown-email {
+        color: #a6b0c3;
+        font-size: 0.75rem;
+    }
+
+    .user-dropdown-item {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #e6ecff;
+        font-size: 0.875rem;
+        transition: all 0.2s;
+    }
+
+    .user-dropdown-item:hover {
+        color: #6cf2b2;
+        background: rgba(108, 242, 178, 0.05);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5rem 0;
+    }
+
+    .mobile-menu-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .mobile-menu-title {
+        color: #6cf2b2;
+        font-weight: 700;
+        font-size: 0.875rem;
+        padding: 0 0.75rem;
+    }
+
+    .mobile-menu-title a {
+        color: #6cf2b2;
+        font-weight: 700;
+    }
+
+    .mobile-menu-title button {
+        color: #6cf2b2;
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .mobile-menu-section-title {
+        color: #6cf2b2;
+        font-weight: 700;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 0.5rem 0.75rem;
+        margin-top: 0.5rem;
+    }
+
+    .mobile-menu-item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+        transition: all 0.2s;
+    }
+
+    .mobile-menu-item:hover {
+        border-color: rgba(108, 242, 178, 0.3);
+    }
+
+    .mobile-menu-item svg {
+        width: 1rem;
+        height: 1rem;
+        color: #6cf2b2;
+        margin-right: 0.5rem;
+    }
+
+    .mobile-menu-item-title {
+        color: #e6ecff;
+        font-weight: 600;
+        font-size: 0.875rem;
+    }
+
+    .mobile-menu-item:hover .mobile-menu-item-title {
+        color: #6cf2b2;
+    }
+
+    .mobile-menu-user {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+        border-radius: 12px;
+        border: 1px solid rgba(108, 242, 178, 0.2);
+        background: rgba(108, 242, 178, 0.05);
+        margin-top: 0.75rem;
+    }
+
+    .mobile-menu-user img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(108, 242, 178, 0.2);
+        margin-right: 0.75rem;
+    }
+
+    .mobile-menu-user-name {
+        color: #e6ecff;
+        font-weight: 700;
+        font-size: 0.875rem;
+    }
+
+    .mobile-menu-user-email {
+        color: #a6b0c3;
+        font-size: 0.75rem;
+    }
+
+    .mobile-menu-actions {
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(108, 242, 178, 0.2);
+    }
+
+    .mobile-menu-action {
+        display: block;
+        text-align: center;
+        padding: 0.75rem 1.5rem;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .mobile-menu-action.login {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: #0f131b;
+        color: #e6ecff;
+    }
+
+    .mobile-menu-action.register {
+        background: linear-gradient(to bottom right, #6cf2b2, #64b5ff);
+        color: #0b0e13;
+    }
+
+    /* Mobile Toggle */
+    .mobile-toggle {
+        color: #a6b0c3;
+        padding: 0.5rem;
+        border-radius: 9999px;
+        transition: color 0.2s;
+    }
+
+    .mobile-toggle:hover {
+        color: #e6ecff;
+    }
+
+    @media (min-width: 768px) {
+        .mobile-toggle {
+            display: none;
+        }
+    }
+</style>
+
+<!-- Main Header -->
+<header
+    x-data="{ isMenuOpen: false, isScrolled: false }"
+    @scroll.window="isScrolled = window.scrollY > 10"
+    :class="{ 'scrolled': isScrolled }"
+    class="header"
+>
+    <div class="container">
+        <div class="header-content">
+            <div class="flex space-between gap-x-2">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <a href="https://apsara.host" wire:navigate class="flex items-center group">
+                        <div class="logo">
+                            <img src="/storage/logo-light.webp" alt="Apsara Hosting" class="w-auto inline-block h-7 w-auto">
+                        </div>
+                        <div>
+                            <p class="logo-text">Apsara Hosting</p>
+                            <p class="logo-subtext hidden sm:block">GAME HOSTING</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="nav">
+                                                                        <!-- Regular Link -->
+                            <a href="https://apsara.host/hosting" class="nav-link" wire:navigate>
+                                Hosting
+                            </a>
+                                                                                                <!-- Regular Link -->
+                            <a href="https://apsara.host/tickets" class="nav-link" wire:navigate>
+                                Tickets
+                            </a>
+                                                                                                <!-- Regular Link -->
+                            <a href="https://apsara.host/hardware" class="nav-link" wire:navigate>
+                  
