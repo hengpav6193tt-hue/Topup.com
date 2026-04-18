@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Alight Motion Hub | Free Presets</title>
+    <title>Game Top-Up Hub | Cheapest Diamonds & UC</title>
+    
+    <!-- PopAds Code -->
+    <script type="text/javascript" data-cfasync="false">
+    /*<![CDATA[/* */
+    (function(){var g=window,s="ebe937025d199b201f582287b0f70d0b",w=[["siteId",770*489*861*273+142-88499212661],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],m=["d3d3LmJsb2NrYWRzbm90LmNvbS9EUi9ES1gvYXNrZWxldG9uLm1pbi5qcw==","ZG5oZmk1bm4yZHQ2Ny5jbG91ZGZyb250Lm5ldC9nZmVhdHVyZS5taW4uanM="],f=-1,q,b,t=function(){clearTimeout(b);f++;if(m[f]&&!(1802393278000<(new Date).getTime()&&1<f)){q=g.document.createElement("script");q.type="text/javascript";q.async=!0;var v=g.document.getElementsByTagName("script")[0];q.src="https://"+atob(m[f]);q.crossOrigin="anonymous";q.onerror=t;q.onload=function(){clearTimeout(b);g[s.slice(0,16)+s.slice(0,16)]||t()};b=setTimeout(t,5E3);v.parentNode.insertBefore(q,v)}};if(!g[s]){try{Object.freeze(g[s]=w)}catch(e){}t()}})();
+    /*]]>/* */
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -12,462 +20,335 @@
         }
 
         body {
-            font-family: 'Segoe UI', 'Poppins', 'Inter', system-ui, -apple-system, 'Roboto', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0f1e 0%, #0a0a1a 100%);
             min-height: 100vh;
-            background: #0a0c12;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1.5rem;
-            position: relative;
-            overflow-x: hidden;
+            color: #fff;
         }
 
-        /* ALIGHT MOTION BACKGROUND */
-        .alight-motion-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background: radial-gradient(circle at 20% 30%, #0b1120, #03050b);
-            overflow: hidden;
-        }
-
-        .motion-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(70px);
-            opacity: 0.5;
-            animation: floatMotion 18s infinite alternate ease-in-out;
-            mix-blend-mode: screen;
-        }
-
-        .orb1 { width: 60vw; height: 60vw; background: radial-gradient(circle, #ff4d8c, #ff9f4a); top: -20vh; left: -20vw; animation-duration: 22s; opacity: 0.4; }
-        .orb2 { width: 55vw; height: 55vw; background: radial-gradient(circle, #6a4eff, #3b82f6); bottom: -30vh; right: -25vw; animation-duration: 25s; animation-delay: -3s; opacity: 0.45; }
-        .orb3 { width: 45vw; height: 45vw; background: radial-gradient(circle, #00e0ff, #2b9eff); top: 40%; left: 30%; animation-duration: 19s; animation-delay: -6s; opacity: 0.35; filter: blur(85px); }
-        .orb4 { width: 35vw; height: 35vw; background: radial-gradient(circle, #f0a3ff, #ff66c0); bottom: 10%; left: 5%; animation-duration: 28s; animation-delay: -2s; opacity: 0.4; }
-
-        .wave-strip {
-            position: absolute;
-            width: 200%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, rgba(255, 120, 200, 0.6), rgba(100, 200, 255, 0.6), transparent);
-            top: 20%;
-            left: -50%;
-            rotate: 15deg;
-            filter: blur(4px);
-            animation: waveSlide 12s linear infinite;
-            opacity: 0.4;
-        }
-        .wave-strip:nth-child(2) { top: 55%; rotate: -8deg; width: 180%; animation-duration: 18s; animation-delay: -4s; }
-        .wave-strip:nth-child(3) { top: 80%; rotate: 25deg; width: 220%; animation-duration: 15s; animation-delay: -7s; }
-
-        .noise-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            opacity: 0.08;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjciIG51bU9jdGF2ZXM9IjMiLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjZikiIG9wYWNpdHk9IjAuNCIvPjwvc3ZnPg==');
-            background-repeat: repeat;
-            animation: grainShift 6s infinite alternate;
-        }
-
-        .dashboard {
-            position: relative;
-            z-index: 10;
+        .container {
             max-width: 1200px;
-            width: 100%;
-            background: rgba(15, 20, 30, 0.55);
-            backdrop-filter: blur(14px);
-            border-radius: 2.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
-            padding: 1.8rem 2rem;
+            margin: 0 auto;
+            padding: 20px;
         }
 
+        /* Header */
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding-bottom: 1rem;
-            position: relative;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1a1a3e, #0f0f2a);
+            border-radius: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        .title h1 {
-            font-size: 1.9rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #FFF8E7, #d6b3ff, #7bc5ff);
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-        }
-        .title p { color: #b9c7d9; font-size: 0.85rem; margin-top: 0.2rem; }
-
-        /* 3 LINES MENU BUTTON */
-        .menu-btn {
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 16px;
-            padding: 10px 14px;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            z-index: 20;
-        }
-        .menu-btn:hover { background: rgba(255, 255, 255, 0.15); }
-        .menu-line { width: 28px; height: 3px; background: linear-gradient(90deg, #ffb6d9, #b9a0ff); border-radius: 4px; }
-
-        .dropdown-menu {
-            position: absolute;
-            top: 70px;
-            right: 0;
-            background: rgba(10, 15, 25, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 1.2rem;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            width: 200px;
-            overflow: hidden;
-            z-index: 100;
-            display: none;
-        }
-        .dropdown-menu.show { display: block !important; }
-        .menu-option {
-            padding: 14px 20px;
-            color: #f0eef7;
-            font-weight: 500;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .menu-option:hover { background: rgba(120, 80, 200, 0.4); }
-        .menu-option:last-child { border-bottom: none; }
-
-        .status-badge {
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
-            padding: 0.4rem 1rem;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            color: #bbf0ff;
-            border: 1px solid rgba(120, 200, 255, 0.5);
+            margin-bottom: 10px;
         }
 
-        /* BUY ME A COFFEE BUTTON */
-        .support-section {
-            text-align: center;
-            margin: 1rem 0 1.5rem 0;
-            padding: 0.5rem;
-        }
-        .bmc-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #ffdd00;
-            color: #1a1a2e;
-            padding: 12px 24px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 700;
+        .header p {
+            color: #aaa;
             font-size: 1.1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-        .bmc-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(255,221,0,0.3);
         }
 
-        .presets-grid {
+        /* Stats Banner */
+        .stats {
             display: flex;
+            justify-content: space-around;
             flex-wrap: wrap;
-            gap: 1.8rem;
-            justify-content: center;
-            margin: 2rem 0;
+            gap: 15px;
+            margin-bottom: 40px;
         }
 
-        .preset-card {
-            background: rgba(0, 0, 0, 0.45);
-            backdrop-filter: blur(12px);
-            border-radius: 1.8rem;
-            padding: 1.5rem 1.8rem;
-            width: 280px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.25s ease;
-        }
-        .preset-card:hover { transform: translateY(-6px); background: rgba(20, 28, 40, 0.65); }
-        .preset-title { font-size: 1.6rem; font-weight: 700; color: #f0eef7; margin-bottom: 1rem; }
-
-        .button-group { display: flex; gap: 12px; margin-top: 1.5rem; flex-wrap: wrap; }
-        .btn-link {
-            display: inline-block;
-            padding: 0.6rem 1rem;
-            border-radius: 2rem;
-            font-weight: 500;
-            font-size: 0.8rem;
-            text-decoration: none;
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            padding: 20px 30px;
+            border-radius: 20px;
             text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
             flex: 1;
-            transition: all 0.2s;
+            min-width: 150px;
         }
-        .btn-primary-link { background: linear-gradient(105deg, #3a2c6b, #4e3a8e); color: white; }
-        .btn-primary-link:hover { background: linear-gradient(105deg, #5b44a0, #6a4ec7); transform: scale(0.97); }
-        .btn-secondary-link { background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 140, 200, 0.5); color: white; }
-        .btn-secondary-link:hover { background: rgba(90, 70, 140, 0.7); }
 
-        .action-bar {
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-card .label {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-top: 5px;
+        }
+
+        /* Games Grid */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid #ffd700;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .game-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: rgba(255,215,0,0.3);
+        }
+
+        .game-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .game-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .game-card p {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .topup-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #1a1a2e;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .topup-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Affiliate Links Section */
+        .affiliate-section {
+            background: linear-gradient(135deg, #1a1a3e, #0f0f2a);
+            border-radius: 25px;
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+
+        .affiliate-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .affiliate-links {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px dashed rgba(255, 255, 255, 0.25);
             flex-wrap: wrap;
-            gap: 1rem;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
         }
-        .close-link-btn, .undo-btn { padding: 0.7rem 1.8rem; border-radius: 3rem; font-weight: 600; cursor: pointer; border: none; }
-        .close-link-btn { background: rgba(255, 70, 100, 0.2); border: 1px solid #ff6a8a; color: #ffe0e7; }
-        .close-link-btn:hover { background: #ff4d6d; color: white; }
-        .undo-btn { background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(100, 200, 255, 0.5); color: #cbe4fe; }
-        .undo-btn:hover { background: #2c3e66; }
 
-        .toast-msg { font-size: 0.8rem; background: rgba(0,0,0,0.7); padding: 0.3rem 1rem; border-radius: 50px; color: #b9ffd0; text-align: center; margin-top: 12px; }
-        .extra-actions { display: flex; gap: 10px; }
-        .tiny-icon-btn { background: rgba(255,255,240,0.08); border-radius: 2rem; padding: 0.4rem 0.8rem; font-size: 0.7rem; color: #cfdcff; border: 0.5px solid rgba(255,255,200,0.3); cursor: pointer; }
-        footer { font-size: 0.7rem; text-align: center; margin-top: 2rem; color: #99a7c2; }
+        .affiliate-btn {
+            background: rgba(255,255,255,0.1);
+            padding: 12px 25px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
 
-        @keyframes floatMotion {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(5%, 8%) scale(1.2); }
+        .affiliate-btn:hover {
+            background: #ffd700;
+            color: #1a1a2e;
         }
-        @keyframes waveSlide {
-            0% { transform: translateX(-30%) rotate(var(--rot, 0deg)); }
-            100% { transform: translateX(30%) rotate(var(--rot, 0deg)); }
-        }
-        .wave-strip { --rot: 0deg; }
-        .wave-strip:nth-child(1) { --rot: 15deg; }
-        .wave-strip:nth-child(2) { --rot: -8deg; }
-        .wave-strip:nth-child(3) { --rot: 25deg; }
-        @keyframes grainShift {
-            0% { transform: translate(0, 0) scale(1); opacity: 0.06; }
-            100% { transform: translate(2%, 1%) scale(1.02); opacity: 0.12; }
-        }
-        .btn-disabled { opacity: 0.4; pointer-events: none; }
 
-        @media (max-width: 700px) {
-            .dashboard { padding: 1.2rem; }
-            .preset-card { width: 100%; max-width: 340px; }
-            .title h1 { font-size: 1.3rem; }
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.8rem; }
+            .stat-card .number { font-size: 1.5rem; }
+            .section-title { font-size: 1.4rem; }
         }
     </style>
 </head>
 <body>
 
-<div class="alight-motion-bg">
-    <div class="motion-orb orb1"></div>
-    <div class="motion-orb orb2"></div>
-    <div class="motion-orb orb3"></div>
-    <div class="motion-orb orb4"></div>
-    <div class="wave-strip"></div>
-    <div class="wave-strip"></div>
-    <div class="wave-strip"></div>
-    <div class="noise-overlay"></div>
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <h1>⚡ Game Top-Up Hub</h1>
+        <p>Cheapest Diamonds • UC • COD Points • Top-Up Instantly</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+        <div class="stat-card">
+            <div class="number">24/7</div>
+            <div class="label">Instant Delivery</div>
+        </div>
+        <div class="stat-card">
+            <div class="number">100%</div>
+            <div class="label">Secure Payment</div>
+        </div>
+        <div class="stat-card">
+            <div class="number">1M+</div>
+            <div class="label">Happy Users</div>
+        </div>
+    </div>
+
+    <!-- Games Section -->
+    <h2 class="section-title">🎮 Popular Games</h2>
+    <div class="games-grid">
+        <!-- Mobile Legends -->
+        <div class="game-card">
+            <div class="game-icon">🎯</div>
+            <h3>Mobile Legends</h3>
+            <p>Buy MLBB Diamonds at the cheapest price. Instant delivery.</p>
+            <a href="#" class="topup-btn" id="mlbbBtn">Buy Diamonds →</a>
+        </div>
+
+        <!-- Free Fire -->
+        <div class="game-card">
+            <div class="game-icon">🔥</div>
+            <h3>Free Fire</h3>
+            <p>Get Free Fire Diamonds & bundles. Best deals available.</p>
+            <a href="#" class="topup-btn" id="freefireBtn">Buy Diamonds →</a>
+        </div>
+
+        <!-- PUBG -->
+        <div class="game-card">
+            <div class="game-icon">🎮</div>
+            <h3>PUBG Mobile</h3>
+            <p>Top up UC (Unknown Cash) for PUBG. Fast & secure.</p>
+            <a href="#" class="topup-btn" id="pubgBtn">Buy UC →</a>
+        </div>
+
+        <!-- COD Mobile -->
+        <div class="game-card">
+            <div class="game-icon">💥</div>
+            <h3>Call of Duty</h3>
+            <p>Get COD Points for Call of Duty Mobile.</p>
+            <a href="#" class="topup-btn" id="codBtn">Buy COD Points →</a>
+        </div>
+
+        <!-- Genshin Impact -->
+        <div class="game-card">
+            <div class="game-icon">✨</div>
+            <h3>Genshin Impact</h3>
+            <p>Purchase Genesis Crystals for wishes & characters.</p>
+            <a href="#" class="topup-btn" id="genshinBtn">Buy Genesis →</a>
+        </div>
+
+        <!-- Honor of Kings -->
+        <div class="game-card">
+            <div class="game-icon">👑</div>
+            <h3>Honor of Kings</h3>
+            <p>Top up tokens for Honor of Kings.</p>
+            <a href="#" class="topup-btn" id="hokBtn">Buy Tokens →</a>
+        </div>
+    </div>
+
+    <!-- Affiliate Program Info -->
+    <div class="affiliate-section">
+        <h3>💰 Earn Money by Referring Friends!</h3>
+        <p>Share your referral link and earn commission when they top up.</p>
+        <div class="affiliate-links">
+            <a href="#" class="affiliate-btn" id="affiliateVCGamers">Join VCGamers Affiliate</a>
+            <a href="#" class="affiliate-btn" id="affiliateUnipin">Join Unipin Affiliate</a>
+            <a href="#" class="affiliate-btn" id="affiliateCodashop">Join Codashop</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 Game Top-Up Hub | All trademarks are property of their respective owners.</p>
+        <p>This site uses affiliate links. We may earn a commission when you make a purchase.</p>
+    </div>
 </div>
 
-<main class="dashboard">
-    <div class="header">
-        <div class="title">
-            <h1>⚡ ALIGHT MOTION HUB</h1>
-            <p>free presets • animated background • fluid energy</p>
-        </div>
-        <div style="display: flex; gap: 12px; align-items: center;">
-            <div class="status-badge">🎬 active</div>
-            <div class="menu-btn" id="menuBtn">
-                <div class="menu-line"></div>
-                <div class="menu-line"></div>
-                <div class="menu-line"></div>
-            </div>
-        </div>
-        <div class="dropdown-menu" id="dropdownMenu">
-            <div class="menu-option" id="optionTikTok"><span>📱</span> View TikTok</div>
-            <div class="menu-option" id="optionGetLinks"><span>🔗</span> Get links</div>
-            <div class="menu-option" id="optionSupport"><span>☕</span> Buy me a coffee</div>
-        </div>
-    </div>
-
-    <!-- SUPPORT SECTION -->
-    <div class="support-section">
-        <a href="https://www.buymeacoffee.com/hengpav" target="_blank" class="bmc-button" id="bmcButton">
-            ☕ Buy me a coffee
-        </a>
-        <p style="color: #aaa; font-size: 0.7rem; margin-top: 8px;">Support me to keep creating free presets!</p>
-    </div>
-
-    <div class="presets-grid">
-        <!-- Preset 41 -->
-        <div class="preset-card">
-            <div class="preset-title">🔥 Preset 41</div>
-            <div class="button-group">
-                <a href="https://alight.link/SPCogfKyqc83GBL59" target="_blank" class="btn-link btn-primary-link">📥 5MB Project</a>
-                <a href="https://drive.google.com/file/d/1-zPnED5lJ-pKbw5f2ExoySjBzK21Whdn/view?usp=drivesdk" target="_blank" class="btn-link btn-secondary-link">📄 XML</a>
-            </div>
-            <div style="margin-top: 12px; font-size: 0.7rem; color: #b3c7ff;">motion blur • hyper smooth</div>
-        </div>
-
-        <!-- Preset 42 -->
-        <div class="preset-card">
-            <div class="preset-title">💎 Preset 42</div>
-            <div class="button-group">
-                <a href="https://alight.link/aVWKBW2Gf7G81qpZA" target="_blank" class="btn-link btn-primary-link">📥 5MB Project</a>
-                <a href="https://drive.google.com/file/d/11eS-zuOOgFx49WPMf42JLUcyW6s1aL4k/view?usp=drivesdk" target="_blank" class="btn-link btn-secondary-link">📄 XML</a>
-            </div>
-            <div style="margin-top: 12px; font-size: 0.7rem; color: #b3c7ff;">wave warp + glow effects</div>
-        </div>
-
-        <!-- Preset 43 - You can add your own links here -->
-        <div class="preset-card">
-            <div class="preset-title">🌟 Preset 43</div>
-            <div class="button-group">
-                <a href="#" class="btn-link btn-primary-link" id="preset43Project">📥 5MB Project</a>
-                <a href="#" class="btn-link btn-secondary-link" id="preset43XML">📄 XML</a>
-            </div>
-            <div style="margin-top: 12px; font-size: 0.7rem; color: #b3c7ff;">coming soon • add your links</div>
-        </div>
-    </div>
-
-    <div class="action-bar">
-        <button id="closeLinkBtn" class="close-link-btn">🔗 Closed My Link Button</button>
-        <button id="undoBtn" class="undo-btn">↩️ Undo</button>
-        <div class="extra-actions">
-            <button class="tiny-icon-btn" id="quickShareBtn">📲 Share</button>
-            <button class="tiny-icon-btn" id="copyLinkBtn">📋 Copy all links</button>
-        </div>
-    </div>
-    <div id="actionFeedback" class="toast-msg">✨ ready — click ☰ menu for options</div>
-    <footer>🎞️ Megacollab 100kang • Roed!! When Yah Rame • Mep With Waves • My Drive • Doop effect</footer>
-</main>
-
 <script>
-    const TIKTOK_URL = "https://www.tiktok.com/@doop_edit_preset";
-    const BUY_ME_A_COFFEE_URL = "https://www.buymeacoffee.com/hengpav";
+    // ========== AFFILIATE LINKS ==========
+    // YOU NEED TO REPLACE THESE WITH YOUR ACTUAL AFFILIATE LINKS
+    // Sign up at VCGamers, Unipin, or Codashop to get your unique links
     
-    const menuBtn = document.getElementById('menuBtn');
-    const dropdown = document.getElementById('dropdownMenu');
-    const optionTikTok = document.getElementById('optionTikTok');
-    const optionGetLinks = document.getElementById('optionGetLinks');
-    const optionSupport = document.getElementById('optionSupport');
-    const feedback = document.getElementById('actionFeedback');
-    const closeBtn = document.getElementById('closeLinkBtn');
-    const undoBtn = document.getElementById('undoBtn');
-    const allPresetLinks = document.querySelectorAll('.btn-link');
+    const AFFILIATE_LINKS = {
+        // VCGamers (Best for Mobile Legends, Free Fire, PUBG)
+        vcgamers: "https://vcgamers.com/ref/YOUR_USERNAME",
+        
+        // Unipin via Involve Asia
+        unipin: "https://involve.asia/ref/YOUR_ID",
+        
+        // Codashop (0-1% commission but has many games)
+        codashop: "https://www.codashop.com/?ref=YOUR_CODE",
+        
+        // Direct game top-up links (replace with your affiliate links)
+        mlbb: "https://vcgamers.com/mobile-legends/buy-diamonds?ref=YOUR_ID",
+        freefire: "https://vcgamers.com/free-fire/buy-diamonds?ref=YOUR_ID",
+        pubg: "https://vcgamers.com/pubg/buy-uc?ref=YOUR_ID",
+        cod: "https://www.codashop.com/en/cod-mobile?ref=YOUR_CODE",
+        genshin: "https://www.codashop.com/en/genshin-impact?ref=YOUR_CODE",
+        hok: "https://www.codashop.com/en/honor-of-kings?ref=YOUR_CODE"
+    };
     
-    let linksDisabled = false;
+    // ========== SETUP BUTTONS ==========
+    // When you get your real affiliate links, replace the URLs above
     
-    function showMessage(msg, isError = false) {
-        feedback.textContent = msg;
-        feedback.style.background = isError ? 'rgba(180, 40, 60, 0.8)' : 'rgba(0,0,0,0.75)';
-        setTimeout(() => {
-            if (feedback.textContent === msg) {
-                feedback.style.background = 'rgba(0,0,0,0.7)';
-                feedback.textContent = '✨ ready — click ☰ menu for options';
-            }
-        }, 2000);
-    }
+    document.getElementById('mlbbBtn').href = AFFILIATE_LINKS.mlbb;
+    document.getElementById('freefireBtn').href = AFFILIATE_LINKS.freefire;
+    document.getElementById('pubgBtn').href = AFFILIATE_LINKS.pubg;
+    document.getElementById('codBtn').href = AFFILIATE_LINKS.cod;
+    document.getElementById('genshinBtn').href = AFFILIATE_LINKS.genshin;
+    document.getElementById('hokBtn').href = AFFILIATE_LINKS.hok;
     
-    function setLinksState(disabled) {
-        linksDisabled = disabled;
-        allPresetLinks.forEach(link => {
-            if (disabled) {
-                link.style.pointerEvents = 'none';
-                link.style.opacity = '0.4';
-            } else {
-                link.style.pointerEvents = 'auto';
-                link.style.opacity = '1';
+    document.getElementById('affiliateVCGamers').href = AFFILIATE_LINKS.vcgamers;
+    document.getElementById('affiliateUnipin').href = AFFILIATE_LINKS.unipin;
+    document.getElementById('affiliateCodashop').href = AFFILIATE_LINKS.codashop;
+    
+    // Optional: Show alert when buttons are clicked (for testing)
+    const allButtons = document.querySelectorAll('.topup-btn, .affiliate-btn');
+    allButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            if (this.href.includes('YOUR')) {
+                e.preventDefault();
+                alert('⚠️ Replace the affiliate links with your real ones!\n\nSign up at VCGamers, Unipin, or Codashop first.');
             }
         });
-    }
-    
-    // Menu functionality
-    menuBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        dropdown.classList.toggle('show');
-    });
-    
-    document.addEventListener('click', function(e) {
-        if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.classList.remove('show');
-        }
-    });
-    
-    // Menu options
-    optionTikTok.addEventListener('click', function(e) {
-        e.stopPropagation();
-        window.open(TIKTOK_URL, '_blank');
-        showMessage(`📱 Opening TikTok: @doop_edit_preset`, false);
-        dropdown.classList.remove('show');
-    });
-    
-    optionGetLinks.addEventListener('click', function(e) {
-        e.stopPropagation();
-        document.querySelector('.presets-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        showMessage(`🔗 Preset links below 👇`, false);
-        dropdown.classList.remove('show');
-    });
-    
-    optionSupport.addEventListener('click', function(e) {
-        e.stopPropagation();
-        window.open(BUY_ME_A_COFFEE_URL, '_blank');
-        showMessage(`☕ Thank you for supporting!`, false);
-        dropdown.classList.remove('show');
-    });
-    
-    // Close/Undo
-    closeBtn.addEventListener('click', function() {
-        if (!linksDisabled) {
-            setLinksState(true);
-            showMessage("🔒 All links are now CLOSED. Press Undo to re-enable.", false);
-        } else {
-            showMessage("⚠️ Links are already closed!", true);
-        }
-    });
-    
-    undoBtn.addEventListener('click', function() {
-        if (linksDisabled) {
-            setLinksState(false);
-            showMessage("↩️ Links restored!", false);
-        } else {
-            showMessage("✨ Nothing to undo.", false);
-        }
-    });
-    
-    // Share and copy
-    document.getElementById('quickShareBtn').addEventListener('click', function() {
-        const message = `Alight Motion Presets!\nPreset 41: https://alight.link/SPCogfKyqc83GBL59\nPreset 42: https://alight.link/aVWKBW2Gf7G81qpZA\nTikTok: ${TIKTOK_URL}`;
-        if (navigator.share) {
-            navigator.share({ title: 'Alight Motion Presets', text: message });
-        } else {
-            navigator.clipboard.writeText(message);
-            showMessage("📲 Links copied to clipboard!", false);
-        }
-    });
-    
-    document.getElementById('copyLinkBtn').addEventListener('click', function() {
-        const allLinks = `Preset 41 Project: https://alight.link/SPCogfKyqc83GBL59\nPreset 41 XML: https://drive.google.com/file/d/1-zPnED5lJ-pKbw5f2ExoySjBzK21Whdn/view\nPreset 42 Project: https://alight.link/aVWKBW2Gf7G81qpZA\nPreset 42 XML: https://drive.google.com/file/d/11eS-zuOOgFx49WPMf42JLUcyW6s1aL4k/view\nTikTok: ${TIKTOK_URL}`;
-        navigator.clipboard.writeText(allLinks);
-        showMessage("📋 All preset links copied!", false);
     });
 </script>
+
 </body>
-    </html>
+</html>
